@@ -1,14 +1,12 @@
-# Django QnA
+# README
 
-### QnA system with 1:N relation
+## QnA system with 1:N relation
 
 ```python
 class Question(models.Model):
-
-    # datas
+    title = models.CharField(max_length=200)
 
 
 class Answer(models.Model):
-
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
 ```
