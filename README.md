@@ -1,6 +1,6 @@
 # README
 
-## QnA system with 1:N relation
+## 1:N relation
 
 ```python
 class Question(models.Model):
