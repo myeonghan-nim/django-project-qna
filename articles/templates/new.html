@@ -1,26 +1,19 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
   <form action="/questions/create/" class="m-5">
-
     <div class="form-group">
-      <label for="user">User name</label>
+      <label for="user">User</label>
       <input type="text" class="form-control" id="user" name="user" placeholder="name">
     </div>
-
     <div class="form-group">
       <label for="title">Title</label>
       <input type="text" class="form-control" id="title" name="title" placeholder="title">
     </div>
-
     <div class="form-group">
       <label for="content">Content</label>
       <input type="text" class="form-control" id="content" name="content" placeholder="content">
     </div>
-
     <button type="submit" class="btn btn-primary">Submit</button>
-    
   </form>
-
 {% endblock %}

@@ -1,41 +1,28 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
   {% for question in questions %}
     <div class="jumbotron m-5">
-
       <h1 class="display-4">{{question.title}}</h1>
-
       <p class="lead">{{question.user}}</p>
-
       <hr class="my-4">
-
       <p>{{question.content}}</p>
-
       {% for answer in question.answer_set.all %}
         {% if forloop.last %}
-          <div class="m-3 d-flex justify-content-between"> 
+          <div class="m-3 d-flex justify-content-between">
             ㄴ {{answer.content}}
-
             <form class="form-inline" action="/questions/{{question.id}}/answers/create/">
-              
               <div class="form-group mx-sm-3 mb-2">
                 <label for="content" class="sr-only">Content</label>
                 <input type="text" class="form-control" id="content" name="content">
               </div>
-
               <button type="submit" class="btn btn-primary mb-2">Submit</button>
-
             </form>
-
           </div>
         {% else %}
           <p class="m-3"> ㄴ {{answer.content}}</p>
         {% endif %}
       {% endfor %}
-
     </div>
   {% endfor %}
-
 {% endblock %}
