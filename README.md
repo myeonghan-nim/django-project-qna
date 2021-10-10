@@ -1,4 +1,4 @@
-# Clone Project: QnA
+# Project: QnA
 
 ## 1:N relation
 
