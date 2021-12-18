@@ -1,6 +1,6 @@
 # Project: QnA
 
-## 1:N relation
+## 1:N
 
 ```python
 class Question(models.Model):
